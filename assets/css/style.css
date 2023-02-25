@@ -1,0 +1,25 @@
+body{
+  display: flex;
+  flex-direction: column;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(27, 37, 141);
+}
+
+main p{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+section{
+  display: flex;
+}
+
+.hero{
+  height: 200px;
+  background-color: red;
+}
