@@ -1,3 +1,9 @@
+/* * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+} */
+
 body{
   display: flex;
   flex-direction: column;
@@ -5,7 +11,23 @@ body{
 header{
   display: flex;
   justify-content: space-between;
-  background-color: rgb(27, 37, 141);
+  background-color: rgba(18, 101, 179, 0.925);
+  align-items: center;
+}
+
+nav{
+  margin-right: 75px;
+}
+
+header a{
+  margin: 2px;
+  text-decoration-color: blue ;
+}
+
+header h1{
+  background-color: red;
+  padding: 8px;
+  margin: 5px;
 }
 
 main{
@@ -13,19 +35,34 @@ main{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  line-height: 25px;
+  min-height: calc(100vh - 237px);
 }
-
-/* h2{
-  flex: 0 0 25%; */
-  /* flex: 1;
-} */
 
 section{
   display: flex;
 }
 
-.hero{
-  height: 200px;
+section h2{
+  flex: 1;
+  /* margin-left: 50px; */
+}
+
+section div{
+  flex: 4;
+}
+
+.hero {
   background-color: red;
+  height: 200px;
+  width: 100%;
+  background-image: url("../images/hero.jpg"); 
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.benefit{
+  margin-bottom: 10px;
+  color: white;
 }
