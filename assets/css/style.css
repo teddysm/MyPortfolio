@@ -1,8 +1,7 @@
-/* * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-} */
+* {
+--border-color: teal;
+--background-color: blue;
+}
 
 body{
   display: flex;
@@ -11,7 +10,7 @@ body{
 header{
   display: flex;
   justify-content: space-between;
-  background-color: rgba(18, 101, 179, 0.925);
+  background-color: rgba(8, 21, 101, 0.925);
   align-items: center;
 }
 
@@ -21,13 +20,15 @@ nav{
 
 header a{
   margin: 2px;
-  text-decoration-color: blue ;
+  text-decoration-color: var(--background-color) ;
+  color: teal;
 }
 
 header h1{
-  background-color: red;
+  background-color: teal;
   padding: 8px;
   margin: 5px;
+  margin-left: 0px;
 }
 
 main{
@@ -44,7 +45,6 @@ section{
 
 section h2{
   flex: 1;
-  /* margin-left: 50px; */
 }
 
 section div{
@@ -55,14 +55,88 @@ section div{
   background-color: red;
   height: 200px;
   width: 100%;
-  background-image: url("../images/hero.jpg"); 
+  background-image: url("../images/hero2.jpg"); 
   background-size: cover;
   background-position: center;
+  margin-bottom: 20px;
+}
+
+.hero-text{
+  width: 300px;
+  height: 20px;
+  background-color: lightblue;
+  text-align: center;
+  left: 760px;
+  top: 165px;
+  position: relative;
+}
+.side-border{
+  border-right: 2px solid darkblue;
+  margin-right: 15px;
+  padding: 5px;
+  text-align: right;
+  word-spacing: 9999rem;
+}
+
+.work{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.card-container{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.content-container{
+  flex-basis: 77%;
+}
+.card{
+  flex-grow: 1;
+  flex-basis: 33%;
+  min-height: 200px;
+  /* background-color: var(--background-color); */
+  margin: 0.5rem;
+  border: 2px solid var(--border-color);
+  text-align: center;
+}
+
+.card img{
+  width: 741px;
+  height: 462px;
+}
+
+.big-card{
+  flex-grow: 1;
+  flex-basis: 100%;
+  min-height: 300px;
+  margin: 0.5rem;
+  border: 2px solid var(--border-color);
+  text-align: center;
 }
 
 
+.contact-link{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 
-.benefit{
-  margin-bottom: 10px;
-  color: white;
+
+@media screen and (max-width: 992px){
+  section, .work, .card-container{
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px){
+  section, .work, .card-container{
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 576px){
+  section, .work, .card-container{
+    flex-direction: column;
+  }
 }
