@@ -4,10 +4,12 @@ const cors = require('cors');
 const nodemailer = require('nodemailer');
 const path = require('path');
 const bodyParser = require('body-parser')
-require('dotenv').config();
+require('dotenv').config({ path: '../.env'});
 
 const PORT = process.env.PORT || 3001;
 const app = express();
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.use(express.static(path.resolve(__dirname, '../build')));
 app.use(cors());
 app.use(bodyParser.json());
@@ -55,9 +57,12 @@ app.post('/api/contact', bodyParser.urlencoded({ extended: false}), (req,res) =>
   });
 })
 
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../build', 'index.html'));
-})
+// app.get('*', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, '../build', 'index.html'));
+// })
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../build/index.html'));
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on PORT: ${PORT}`);
