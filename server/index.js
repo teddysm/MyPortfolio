@@ -13,6 +13,7 @@ app.use(express.static(path.join(__dirname, '../client/build')));
 
 app.use(cors());
 app.use(bodyParser.json());
+app.set('trust proxy', true);
 
 app.get('/api', (req, res) => {
   res.json({ message: 'Server message received' });
