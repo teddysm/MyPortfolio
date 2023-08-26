@@ -8,13 +8,16 @@ require('dotenv').config();
 
 const PORT = process.env.PORT || 3001;
 const app = express();
+app.set('trust proxy', true);
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../client/build')));
 
-app.use(cors());
+app.use(
+  cors({
+    origin: 'https://thanh-doan-portfolio-63f547d0a228.herokuapp.com/',
+  })
+);
 app.use(bodyParser.json());
-app.set('trust proxy', true);
-
 app.get('/api', (req, res) => {
   res.json({ message: 'Server message received' });
 });
