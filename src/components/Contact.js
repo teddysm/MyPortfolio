@@ -15,7 +15,18 @@ export const Contact = () => {
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState('Send');
   const [status, setStatus] = useState({});
-
+  // const emailCheck = () => {
+  //   const emailRegEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+  //   if (emailValue.match(emailRegEx) && emailValue.trim().length > 0) {
+  //       setEmailError('\u00A0')
+  //       console.log('good email')
+  //       return true;
+  //   } else {
+  //       setEmailError('This Email is not valid!')
+  //       console.log('bad email')
+  //       return false;
+  //   };
+  // };
   const onFormUpdate = (category, value) => {
       setFormDetails({
         ...formDetails,
