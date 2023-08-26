@@ -92,17 +92,7 @@ export const Contact = () => {
                           name='user_name'
                           placeholder='Your Name'
                           onChange={(e) => onFormUpdate('name', e.target.value)}
-                        />
-                      </Col>
-                      <Col size={12} sm={6} className='px-1'>
-                        <input
-                          type='email'
-                          value={formDetails.email}
-                          name='user_email'
-                          placeholder='Email Address'
-                          onChange={(e) =>
-                            onFormUpdate('email', e.target.value)
-                          }
+                          required
                         />
                       </Col>
                       <Col size={12} sm={6} className='px-1'>
@@ -114,8 +104,22 @@ export const Contact = () => {
                           onChange={(e) =>
                             onFormUpdate('phone', e.target.value)
                           }
+                          required
                         />
                       </Col>
+                      <Col size={12} sm={12} className='px-1'>
+                        <input
+                          type='email'
+                          value={formDetails.email}
+                          name='user_email'
+                          placeholder='Email Address'
+                          onChange={(e) =>
+                            onFormUpdate('email', e.target.value)
+                          }
+                          required
+                        />
+                      </Col>
+
                       <Col size={12} className='px-1'>
                         <textarea
                           rows='6'
@@ -125,6 +129,7 @@ export const Contact = () => {
                           onChange={(e) =>
                             onFormUpdate('message', e.target.value)
                           }
+                          required
                         ></textarea>
                         {status.message && (
                           <p
