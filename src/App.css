@@ -168,7 +168,7 @@ span.navbar-text {
   color: #fff;
   border: 1px solid #fff;
   padding: 18px 34px;
-  font-size: 18px;
+  font-size: 20px;
   margin-left: 18px;
   position: relative;
   background-color: transparent;
@@ -278,6 +278,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 .banner p {
   color: white;
   font-size: 22px;
+  font-weight: 420;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
@@ -285,7 +286,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 .banner button {
   color: #fff;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 40px;
   margin-top: 50px;
   letter-spacing: 0.8px;
   display: flex;

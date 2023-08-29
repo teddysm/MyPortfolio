@@ -54,7 +54,7 @@ export const Banner = () => {
 
   return (
     <section className='banner' id='home'>
-      <Container fluid="md">
+      <Container fluid='md'>
         <Row className='aligh-items-center'>
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
@@ -78,18 +78,21 @@ export const Banner = () => {
                     </span>
                   </h1>
                   <p>
-                    My name is Thanh Doan, I usually go by Ted. I was born in Ho
-                    Chi Minh city, Vietnam. I started my tech journey at the age
-                    of 5 by messing with (and breaking) all pieces of tech I
+                    My name is Thanh Doan but I usually go by Ted. I was born in
+                    Ho Chi Minh City, Vietnam. I started my tech journey at the
+                    age of 5 by messing with (and breaking) all pieces of tech I
                     could get my hands on. When I got my first PC, I realized
                     that I have met my match since there were so many things I
                     could learn on the Internet. That was how I got into
                     Computer Science and Software Engineering. I like solving
                     problems, especially with code.
                   </p>
-                  <AnchorLink href='#connect'>
+                  <AnchorLink
+                    href='#connect'
+                    style={{ textDecoration: 'none' }}
+                  >
                     <button>
-                      Let’s Connect <ArrowRightCircle size={25} />
+                      Let’s Connect <ArrowRightCircle size={30} />
                     </button>
                   </AnchorLink>
                 </div>
