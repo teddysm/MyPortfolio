@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import headerImg from '../assets/img/Me.png';
-import { ArrowRightCircle } from 'react-bootstrap-icons';
+import { ArrowRightCircle, FileEarmarkArrowDown } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { Link } from "react-router-dom";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -95,6 +96,15 @@ export const Banner = () => {
                       Let’s Connect <ArrowRightCircle size={30} />
                     </button>
                   </AnchorLink>
+                  <a
+                    href='https://drive.google.com/file/d/1CTiddYCasN0T9z1YEsBwx2L99oxiEUmS/view?usp=sharing'
+                    target='_blank'
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <button>
+                      My Resume <FileEarmarkArrowDown size={30} />
+                    </button>
+                  </a>
                 </div>
               )}
             </TrackVisibility>
