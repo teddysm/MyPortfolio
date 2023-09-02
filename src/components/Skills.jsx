@@ -46,13 +46,13 @@ export const Skills = () => {
               </p>
               <CardGroup className='skill-stack'>
                 <Card bg='info'>
-                  <Card.Img variant='top' src={mern} />
+                  <Card.Img variant='top' src={mern} alt='MERN Stack' />
                   <Card.Body>
                     <Card.Title>MERN Stack</Card.Title>
                   </Card.Body>
                 </Card>
                 <Card bg='info'>
-                  <Card.Img variant='top' src={sern} />
+                  <Card.Img variant='top' src={sern} alt='SERN Stack' />
                   <Card.Body>
                     <Card.Title>SERN Stack</Card.Title>
                   </Card.Body>
@@ -64,27 +64,27 @@ export const Skills = () => {
                 className='skill-slider'
               >
                 <div className='item'>
-                  <img src={meter1} alt='Image' />
+                  <img src={meter1} alt='Skill Image' />
                   <h5>Web Development</h5>
                 </div>
                 <div className='item'>
-                  <img src={meter3} alt='Image' />
+                  <img src={meter3} alt='Skill Image' />
                   <h5>Creativity</h5>
                 </div>
                 <div className='item'>
-                  <img src={meter3} alt='Image' />
+                  <img src={meter3} alt='Skill Image' />
                   <h5>Problem solving</h5>
                 </div>
                 <div className='item'>
-                  <img src={meter1} alt='Image' />
+                  <img src={meter1} alt='Skill Image' />
                   <h5>Teamwork</h5>
                 </div>
                 <div className='item'>
-                  <img src={meter1} alt='Image' />
+                  <img src={meter1} alt='Skill Image' />
                   <h5>Analysis</h5>
                 </div>
                 <div className='item'>
-                  <img src={meter1} alt='Image' />
+                  <img src={meter1} alt='Skill Image' />
                   <h5>Web Development</h5>
                 </div>
               </Carousel>
@@ -92,7 +92,11 @@ export const Skills = () => {
           </Col>
         </Row>
       </Container>
-      <img className='background-image-left' src={colorSharp} />
+      <img
+        className='background-image-left'
+        src={colorSharp}
+        alt='Background Image'
+      />
     </section>
   );
 };
