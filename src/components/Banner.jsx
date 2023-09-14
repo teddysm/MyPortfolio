@@ -5,16 +5,15 @@ import { ArrowRightCircle, FileEarmarkArrowDown } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { Link } from "react-router-dom";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
-  const [delta, setDelta] = useState(300 - Math.random() * 125);
+  const [delta, setDelta] = useState(300 - Math.random() * 80);
   const [index, setIndex] = useState(1);
-  const toRotate = ['Web Developer', 'Software Engineer'];
-  const period = 1400;
+  const toRotate = ['Web Developer', 'Software Engineer', 'UX/UI Designer'];
+  const period = 1600;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -56,13 +55,13 @@ export const Banner = () => {
   return (
     <section className='banner' id='home'>
       <Container fluid='md'>
-        <Row className='aligh-items-center'>
+        <Row className='align-items-center'>
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) => (
                 <div
                   className={
-                    isVisible ? 'animate__animated animate__fadeIn' : ''
+                    isVisible ? 'animate__animated animate__backInLeft' : ''
                   }
                 >
                   <span className='tagline'>
@@ -79,33 +78,45 @@ export const Banner = () => {
                     </span>
                   </h1>
                   <p>
-                    My name is Thanh Doan but I usually go by Ted. I was born in
-                    Ho Chi Minh City, Vietnam. I started my tech journey at the
-                    age of 5 by messing with (and breaking) all pieces of tech I
+                    My name is Thanh Doan, I usually go by Ted. I was born in Ho
+                    Chi Minh City, Vietnam. I started my tech journey at the age
+                    of 5 by messing with (and breaking) all pieces of tech I
                     could get my hands on. When I got my first PC, I realized
                     that I have met my match since there were so many things I
                     could learn on the Internet. That was how I got into
                     Computer Science and Software Engineering. I like solving
                     problems, especially with code.
                   </p>
-                  <AnchorLink
-                    href='#connect'
-                    style={{ textDecoration: 'none' }}
-                  >
-                    <button>
-                      Let’s Connect <ArrowRightCircle size={30} />
-                    </button>
-                  </AnchorLink>
-                  <a
-                    href='https://drive.google.com/file/d/1CTiddYCasN0T9z1YEsBwx2L99oxiEUmS/view?usp=sharing'
-                    target='_blank'
-                    style={{ textDecoration: 'none' }}
-                  >
-                    <button>
-                      My Resume <FileEarmarkArrowDown size={30} />
-                    </button>
-                  </a>
                 </div>
+              )}
+            </TrackVisibility>
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div>
+            <AnchorLink href='#connect' style={{ textDecoration: 'none' }}>
+              <button
+              className={
+                isVisible ? 'animate__animated animate__swing animate__delay-0.5s animate__repeat-2' : ''
+              }
+              >
+                Let’s Connect <ArrowRightCircle size={30} />
+              </button>
+            </AnchorLink>
+            <a
+              href='https://drive.google.com/file/d/19f5deEavjpFI3pux7OPFaB_b3GtUgUCy/view?usp=sharing'
+              rel='noreferrer'
+              target='_blank'
+              style={{ textDecoration: 'none' }}
+            >
+              <button
+              className={
+                isVisible ? 'animate__animated animate__bounce animate__delay-0.5s animate__repeat-2' : ''
+              }
+              >
+                My Resume <FileEarmarkArrowDown size={30} />
+              </button>
+            </a>
+            </div>
               )}
             </TrackVisibility>
           </Col>

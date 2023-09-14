@@ -33,7 +33,7 @@ export const NavBar = () => {
     <Router>
       <Navbar expand='md' className={scrolled ? 'scrolled' : ''}>
         <Container>
-          <Navbar.Brand href='/'>
+          <Navbar.Brand href='/' style={{cursor: 'default'}}>
             <img src={logo} alt='Logo' />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav'>
@@ -73,9 +73,30 @@ export const NavBar = () => {
             </Nav>
             <span className='navbar-text'>
               <div className='social-icon'>
-                <Link to="https://github.com/teddysm" target="_blank" rel="noopener noreferrer"> <img src={navIcon1} alt='Github Link' /> </Link>
-                <Link to="https://www.linkedin.com/in/thanhtdoan" target="_blank" rel="noopener noreferrer"> <img src={navIcon2} alt='LinkedIn Link' /> </Link>
-                <Link to="https://www.instagram.com/eyitsteddey/" target="_blank" rel="noopener noreferrer"> <img src={navIcon3} alt='Instagram Link' /> </Link>
+                <Link
+                  to='https://github.com/teddysm'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {' '}
+                  <img src={navIcon1} alt='Github Link' />{' '}
+                </Link>
+                <Link
+                  to='https://www.linkedin.com/in/thanhtdoan'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {' '}
+                  <img src={navIcon2} alt='LinkedIn Link' />{' '}
+                </Link>
+                <Link
+                  to='https://www.instagram.com/eyitsteddey/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {' '}
+                  <img src={navIcon3} alt='Instagram Link' />{' '}
+                </Link>
               </div>
               <HashLink to='#connect'>
                 <button className='vvd'>
