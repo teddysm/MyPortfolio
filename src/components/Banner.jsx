@@ -93,30 +93,37 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) => (
                 <div>
-            <AnchorLink href='#connect' style={{ textDecoration: 'none' }}>
-              <button
-              className={
-                isVisible ? 'animate__animated animate__swing animate__delay-0.5s animate__repeat-2' : ''
-              }
-              >
-                Let’s Connect <ArrowRightCircle size={30} />
-              </button>
-            </AnchorLink>
-            <a
-              href='https://drive.google.com/file/d/19f5deEavjpFI3pux7OPFaB_b3GtUgUCy/view?usp=sharing'
-              rel='noreferrer'
-              target='_blank'
-              style={{ textDecoration: 'none' }}
-            >
-              <button
-              className={
-                isVisible ? 'animate__animated animate__bounce animate__delay-0.5s animate__repeat-2' : ''
-              }
-              >
-                My Resume <FileEarmarkArrowDown size={30} />
-              </button>
-            </a>
-            </div>
+                  <AnchorLink
+                    href='#connect'
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <button
+                      className={
+                        isVisible
+                          ? 'animate__animated animate__swing animate__delay-0.5s animate__repeat-2'
+                          : ''
+                      }
+                    >
+                      Let’s Connect <ArrowRightCircle size={30} />
+                    </button>
+                  </AnchorLink>
+                  <a
+                    href='https://drive.google.com/file/d/19f5deEavjpFI3pux7OPFaB_b3GtUgUCy/view?usp=sharing'
+                    rel='noreferrer'
+                    target='_blank'
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <button
+                      className={
+                        isVisible
+                          ? 'animate__animated animate__bounce animate__delay-0.5s animate__repeat-2'
+                          : ''
+                      }
+                    >
+                      My Resume <FileEarmarkArrowDown size={30} />
+                    </button>
+                  </a>
+                </div>
               )}
             </TrackVisibility>
           </Col>
@@ -125,7 +132,7 @@ export const Banner = () => {
               {({ isVisible }) => (
                 <div
                   className={
-                    isVisible ? 'animate__animated animate__zoomIn' : ''
+                    isVisible ? 'animate__animated animate__zoomInDown' : ''
                   }
                 >
                   <img src={headerImg} alt='Header Img' />

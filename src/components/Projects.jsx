@@ -68,7 +68,7 @@ export const Projects = () => {
               {({ isVisible }) => (
                 <div
                   className={
-                    isVisible ? 'animate__animated animate__fadeIn' : ''
+                    isVisible ? 'animate__animated animate__zoomInUp' : ''
                   }
                 >
                   <h2>Projects</h2>
@@ -92,7 +92,7 @@ export const Projects = () => {
                     <Tab.Content
                       id='slideInUp'
                       className={
-                        isVisible ? 'animate__animated animate__slideInUp' : ''
+                        isVisible ? 'animate__animated animate__zoomInUp' : ''
                       }
                     >
                       <Tab.Pane eventKey='first'>
